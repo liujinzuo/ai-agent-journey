@@ -38,8 +38,11 @@ docs/      项目立项文档
 
 - [x] 安装 Python 3.13.14
 - [x] 安装 Git 2.56.0，配置用户名与邮箱
-- [x] 创建本仓库
-- [x] 推送到 GitHub（2026-11-02 完成，commit dfd6388）
+- [x] 安装 VS Code（待装 Python 插件）
+- [x] 创建本仓库并写清学习目标
+- [x] 创建虚拟环境 `.venv`（`python -m venv .venv`）
+- [x] 跑通 `code/day01_hello.py`
+- [x] 推送到 GitHub（commit dfd6388）
 
 ## 今日复盘（Day1）
 
