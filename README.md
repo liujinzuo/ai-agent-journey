@@ -39,4 +39,10 @@ docs/      项目立项文档
 - [x] 安装 Python 3.13.14
 - [x] 安装 Git 2.56.0，配置用户名与邮箱
 - [x] 创建本仓库
-- [ ] 推送到 GitHub
+- [x] 推送到 GitHub（2026-11-02 完成，commit dfd6388）
+
+## 今日复盘（Day1）
+
+- 环境：Python 3.13.14、Git 2.56.0 装好，VS Code 待装。
+- 踩坑：建仓库时 GitHub 自动生成了 README，导致本地历史与远端不一致，用 `git push -f` 覆盖解决（仅限空仓库）。
+- 学会的命令：`git init`、`git add`、`git commit`、`git remote add`、`git push`、`git status`。
