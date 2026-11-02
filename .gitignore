@@ -1,0 +1,34 @@
+# 密钥（最重要，绝不提交）
+.env
+.env.*
+*.key
+secrets.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# 数据与向量库（体积大，不进仓库）
+data/
+*.db
+*.sqlite3
+chroma/
+*.faiss
+
+# 编辑器与系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 日志与临时输出
+logs/
+*.log
+trace.jsonl
+outputs/
