@@ -44,6 +44,15 @@ docs/      项目立项文档
 - [x] 跑通 `code/day01_hello.py`
 - [x] 推送到 GitHub（commit dfd6388）
 
+## Day2 · Python 基础语法（2026-11-02 晚开始）
+
+- [ ] 学：变量与赋值、四种基本数据类型（int / float / str / bool）
+- [ ] 学：运算符（+ - * / // % **）、字符串格式化（f-string）
+- [ ] 学：input() 输入、print() 输出、type() 查看类型
+- [ ] 写：`code/day02_calculator.py` 命令行计算器
+- [ ] 记：`notes/Day02.md` 今日笔记
+- [ ] 提交并推送
+
 ## 今日复盘（Day1）
 
 - 环境：Python 3.13.14、Git 2.56.0 装好，VS Code 待装。
