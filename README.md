@@ -44,14 +44,18 @@ docs/      项目立项文档
 - [x] 跑通 `code/day01_hello.py`
 - [x] 推送到 GitHub（commit dfd6388）
 
-## Day2 · Python 基础语法（2026-11-02 晚开始）
+## Day2 · Python 基础语法（2026-11-03 完成）
 
-- [ ] 学：变量与赋值、四种基本数据类型（int / float / str / bool）
-- [ ] 学：运算符（+ - * / // % **）、字符串格式化（f-string）
-- [ ] 学：input() 输入、print() 输出、type() 查看类型
-- [ ] 写：`code/day02_calculator.py` 命令行计算器
-- [ ] 记：`notes/Day02.md` 今日笔记
+- [x] 学：变量与赋值、四种基本数据类型（int / float / str / bool）
+- [x] 学：运算符、字符串格式化（f-string）
+- [x] 学：input() / print() / type()
+- [x] 写并跑通：`code/day02_calculator.py`（输入 10 和 3，四行结果正常）
+- [x] 补：`notes/python_type_conversion_cheatsheet.md` 类型转换速查卡
+- [ ] 记：`notes/Day02.md` 今日笔记（模板在，待补「我踩的坑」）
 - [ ] 提交并推送
+
+> 今日按最低标准验收：不用背、不用重写，跑通计算器即算 Day2 通过。
+> 类型转换属于「随用随查」的知识，不要求记忆，写到后面自然就熟了。
 
 ## 今日复盘（Day1）
 
