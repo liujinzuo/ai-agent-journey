@@ -1,0 +1,12 @@
+An AI agent is a program that uses a large language model to decide what to do next.
+Unlike a simple chatbot, an agent can call tools, read files, search the web, and remember what happened before.
+The core loop is simple: observe the state, think about the next step, act by calling a tool, then observe the result again.
+This loop repeats until the task is done or the agent gives up.
+
+Most agents fail not because the model is weak, but because the context is messy and the tools are poorly designed.
+A good agent keeps its state in plain data structures: a list of messages, a dictionary of tool results, and a small set of clear instructions.
+Memory matters more than intelligence in long tasks. Evaluation matters more than prompt tricks.
+
+If you can measure whether the agent solved the task, you can improve it step by step.
+Build small, test often, and keep every tool simple enough to describe in one sentence.
+Write down what you tried, what failed, and what you learned. That record is the only proof that you actually practiced.

@@ -52,10 +52,35 @@ docs/      项目立项文档
 - [x] 写并跑通：`code/day02_calculator.py`（输入 10 和 3，四行结果正常）
 - [x] 补：`notes/python_type_conversion_cheatsheet.md` 类型转换速查卡
 - [ ] 记：`notes/Day02.md` 今日笔记（模板在，待补「我踩的坑」）
-- [ ] 提交并推送
+- [x] 提交并推送（2026-11-04 确认，origin/main = e06ab08）
 
 > 今日按最低标准验收：不用背、不用重写，跑通计算器即算 Day2 通过。
 > 类型转换属于「随用随查」的知识，不要求记忆，写到后面自然就熟了。
+
+## Day3 · 数据结构：列表 / 字典 / 元组 / 集合（2026-11-04）
+
+- [x] 学：5.1 列表（索引、切片、append / remove、遍历）— 2026-11-04
+- [x] 学：5.5 字典（get / items / 键值遍历）— 2026-11-05
+- [ ] 学：列表推导式、字典推导式
+- [x] 写并跑通：`code/day03_wordcount.py`（读 `code/sample.txt`，输出词频 Top 20）
+- [x] 改一处并跑通：用 `code/day02_calculator.py` 当输入跑通（71 词 / 45 unique）
+- [ ] 记：`notes/Day03.md`
+- [ ] 提交并推送
+
+> 目标是「会用」不是「背下来」。忘记语法就翻 `notes/Day03.md`，那里面有一张速查表。
+> 唯一值得记住的一行：`counts[w] = counts.get(w, 0) + 1`
+
+## Day4 · 控制流与异常处理（2026-11-05）
+
+- [x] 学：if / elif / else、for / while、break / continue
+- [x] 学：try / except / else / finally，认识常见异常类型（官方 8.3 / 8.7）
+- [x] 写并跑通：`code/day04_guess.py`（猜数字，非法输入不崩、不扣次数）
+- [x] 改一处：`MAX_TRIES` 8 → 3，实测开局提示变「3 次机会」
+- [ ] 读：`notes/Day04.md` 第四节「为什么 Agent 必须捕获工具异常」
+- [ ] 记：`notes/Day04.md`
+- [ ] 提交并推送
+
+> 今天唯一要带走的：**别让程序因为一行坏输入就崩，也别让 Agent 因为一次工具失败就死。**
 
 ## 今日复盘（Day1）
 
