@@ -51,7 +51,7 @@ docs/      项目立项文档
 - [x] 学：input() / print() / type()
 - [x] 写并跑通：`code/day02_calculator.py`（输入 10 和 3，四行结果正常）
 - [x] 补：`notes/python_type_conversion_cheatsheet.md` 类型转换速查卡
-- [ ] 记：`notes/Day02.md` 今日笔记（模板在，待补「我踩的坑」）
+- [x] 记：`notes/Day02.md` 今日笔记（2026-11-08 补齐「我踩的坑」与总结）
 - [x] 提交并推送（2026-11-04 确认，origin/main = e06ab08）
 
 > 今日按最低标准验收：不用背、不用重写，跑通计算器即算 Day2 通过。
@@ -61,11 +61,11 @@ docs/      项目立项文档
 
 - [x] 学：5.1 列表（索引、切片、append / remove、遍历）— 2026-11-04
 - [x] 学：5.5 字典（get / items / 键值遍历）— 2026-11-05
-- [ ] 学：列表推导式、字典推导式
+- [x] 学：列表推导式、字典推导式（练习 `code/day03_comprehension.py` 三项全过，速查 `notes/python_comprehension_cheatsheet.md`）
 - [x] 写并跑通：`code/day03_wordcount.py`（读 `code/sample.txt`，输出词频 Top 20）
 - [x] 改一处并跑通：用 `code/day02_calculator.py` 当输入跑通（71 词 / 45 unique）
-- [ ] 记：`notes/Day03.md`
-- [ ] 提交并推送
+- [x] 记：`notes/Day03.md`（2026-11-08）
+- [x] 提交并推送（与 Day4 合并为 a2c74a0）
 
 > 目标是「会用」不是「背下来」。忘记语法就翻 `notes/Day03.md`，那里面有一张速查表。
 > 唯一值得记住的一行：`counts[w] = counts.get(w, 0) + 1`
@@ -76,11 +76,46 @@ docs/      项目立项文档
 - [x] 学：try / except / else / finally，认识常见异常类型（官方 8.3 / 8.7）
 - [x] 写并跑通：`code/day04_guess.py`（猜数字，非法输入不崩、不扣次数）
 - [x] 改一处：`MAX_TRIES` 8 → 3，实测开局提示变「3 次机会」
-- [ ] 读：`notes/Day04.md` 第四节「为什么 Agent 必须捕获工具异常」
-- [ ] 记：`notes/Day04.md`
-- [ ] 提交并推送
+- [x] 读：`notes/Day04.md` 第四节「为什么 Agent 必须捕获工具异常」（2026-11-08）
+- [x] 记：`notes/Day04.md`（2026-11-08）
+- [x] 提交并推送（与 Day3 合并为 a2c74a0）
 
 > 今天唯一要带走的：**别让程序因为一行坏输入就崩，也别让 Agent 因为一次工具失败就死。**
+
+## Day5 · 函数与模块化（2026-11-06）
+
+- [ ] 学：def / 参数 / 返回值 / 默认参数
+- [ ] 学：*args / **kwargs / lambda / 作用域
+- [ ] 跑通：`code/day05_functions.py`（七种写法对照）
+- [ ] 重构：把 `code/day02_calculator.py` 拆成 ≥3 个函数 + main()，输出与原版一字不差
+- [ ] 记：`notes/Day05.md`
+- [ ] 提交并推送
+
+> 今天的验收线只有一条：**输入 10 和 3，重构版的输出必须和原来完全一样。**
+> 工具（tool）就是函数 —— 你现在写的每个函数，都是 Day40 之后 Function Calling 的零件。
+
+## Day6 · 文件、JSON、路径（2026-11-07，待补）
+
+- [ ] 学：`open()` / `read_text` / `write_text`、`encoding="utf-8"` 为什么必须写
+- [ ] 学：`json.loads` / `json.dumps`、`ensure_ascii=False` 的作用
+- [ ] 学：`pathlib.Path`、`Path(__file__).parent` 为什么比相对路径可靠
+- [ ] 跑通：`code/day06_todo.py list`（空清单不报错）
+- [ ] 用一遍：`add` / `list` / `done` / `rm` 各一次，关掉终端再开，数据还在
+- [ ] 记：`notes/Day06.md`
+- [ ] 提交并推送
+
+> 验收：**关掉 PowerShell 再打开，`list` 出来的条目还在。**
+> JSON 是你和大模型沟通的通用语言 —— 后面每一次工具调用、每一条对话历史，都是 JSON。
+
+## Day7 · 周复盘 + 第一次用 AI 写代码（2026-11-08）
+
+- [ ] 复盘：把 Day1~Day6 的打卡项逐条过一遍，没勾的今天补齐或明确划掉
+- [ ] 确认：本地与远端一致（`git status -sb` 显示 `## main...origin/main` 且无改动）
+- [ ] 写：`notes/Week01-review.md`（学了什么 / 卡在哪 / 下周改什么）
+- [ ] 试：用 AI 帮你写一个小工具（比如把 `day03_wordcount.py` 改成支持中文分词），体验「说需求 → 改代码 → 验收」
+- [ ] 提交并推送
+
+> 周复盘的作用不是打卡，是**发现自己哪一天在假装学习**。写不出来，就是没学会。
 
 ## 今日复盘（Day1）
 

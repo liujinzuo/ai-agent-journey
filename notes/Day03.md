@@ -56,6 +56,9 @@ counts [W]=counts.get(w,0)+1
 
 ## 三、列表推导式（把 3 行压成 1 行）
 
+> 这一节是后补的（2026-11-08），配套练习：`code/day03_comprehension.py`
+> 完整速查卡：`notes/python_comprehension_cheatsheet.md`（模板 + 13 种写法的实测输出 + 三个常见错）
+
 ```python
 # 普通写法
 nums = [1, 2, 3, 4, 5]
@@ -80,6 +83,15 @@ flip = {v: k for k, v in counts.items()}
 ```
 
 推导式读起来是「对每个 n，产出 n*n」——**先说产出，再说来源**，习惯了会很顺。
+
+**动手（10 分钟，这条尾巴就靠它补）**：
+
+```
+python code/day03_comprehension.py
+```
+
+脚本里有 6 个示例 + 3 个 TODO，把 TODO 改完再跑，自检会打 `[OK]`。  
+改不出来就看提示行，三个都是「把 for 循环那几行搬进方括号」。
 
 ---
 
@@ -123,7 +135,7 @@ Top20(list[tuple])
 
 ## 附：为什么拿中文文本 / 源码当输入，会冒出一整串汉字？
 
-跑 `python code/day03_wordcount.py code/day02_calculator.py` 时，榜单里会出现
+跑 `python code/day03_wordcount.py code/day02_calculator.py` 时，榜单里会出现  
 `请输入第一个数字`、`从键盘读两个数字` 这种整句中文——**这不是 bug**。
 
 - `ch.isalpha()` 对汉字也返回 `True`，所以汉字被保留下来
@@ -141,8 +153,18 @@ return [w for w in raw if w not in STOPWORDS and len(w) >= 2 and w.isascii()]
 
 ## 七、我踩的坑
 
--
+> 挑一条真发生过的，写成自己的话：
+>
+> - 拿中文源码当输入，整句汉字变成一个「词」（`isalpha()` 对汉字也返回 True，但没空格切不开）
+> - 推导式里 `if` 放前面和放后面含义不一样，搞混了
+> - 排序那句 `key=lambda kv: kv[1]` 看不懂，先背下来了
+
+- 拿中文源码当输入，整句汉字被当成一个「词」，因为 isalpha() 对汉字也返回 True，但中文没空格切不开。
+
 
 ## 八、一句话总结
 
--
+> 参考：列表有序能改，字典按键取值；计数用 `counts.get(w, 0) + 1`，四行循环能压成一行推导式。
+
+- 列表有序能改、字典按键取值；计数用 counts.get(w, 0) + 1，四行循环能压成一行推导式。
+
