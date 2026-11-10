@@ -103,7 +103,7 @@ docs/      项目立项文档
 
 ## Day5 · 函数与模块化（2026-11-06）
 
-- [ ] 学：def / 参数 / 返回值 / 默认参数
+- [ ] 学：def / 参数 / 返回值 / 默认参数（速查 `notes/python_function_cheatsheet.md`）
 - [ ] 学：*args / **kwargs / lambda / 作用域
 - [ ] 跑通：`code/day05_functions.py`（七种写法对照）
 - [ ] 重构：把 `code/day02_calculator.py` 拆成 ≥3 个函数 + main()，输出与原版一字不差

@@ -6,6 +6,9 @@
 
 ---
 
+> 速查卡（今天只需要看这张）：`notes/python_function_cheatsheet.md`
+> 实跑演示：`python code/day05_functions.py`（七种写法） / `python code/day05_verify.py`（重构验收）
+
 ## 一、什么时候该写函数
 
 一句判断标准：**这段代码你能用一句话给它起个名字，就该抽成函数。**
