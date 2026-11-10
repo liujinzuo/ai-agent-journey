@@ -101,14 +101,15 @@ docs/      项目立项文档
 
 > 今天唯一要带走的：**别让程序因为一行坏输入就崩，也别让 Agent 因为一次工具失败就死。**
 
-## Day5 · 函数与模块化（2026-11-06）
+## Day5 · 函数与模块化（2026-11-10 完成）
 
-- [ ] 学：def / 参数 / 返回值 / 默认参数（速查 `notes/python_function_cheatsheet.md`）
-- [ ] 学：*args / **kwargs / lambda / 作用域
-- [ ] 跑通：`code/day05_functions.py`（七种写法对照）
-- [ ] 重构：把 `code/day02_calculator.py` 拆成 ≥3 个函数 + main()，输出与原版一字不差
-- [ ] 记：`notes/Day05.md`
-- [ ] 提交并推送
+- [x] 学：def / 参数 / 返回值 / 默认参数（速查 `notes/python_function_cheatsheet.md`）
+- [x] 学：*args / **kwargs / lambda / 作用域（只要求「见过」，会看即可）
+- [x] 跑通：`code/day05_functions.py`（七种写法对照）
+- [x] 重构：`code/day02_calculator_func.py` 拆成 4 个函数 + main()，`day05_verify.py` 三组输入逐字节一致
+- [x] 小实验：`code/day05_quiz_demo.py`（给 calculate 加 `//`，证明 print_results 不用改）
+- [x] 记：`notes/Day05.md`
+- [x] 提交并推送（`7105850`）
 
 > 今天的验收线只有一条：**输入 10 和 3，重构版的输出必须和原来完全一样。**
 > 工具（tool）就是函数 —— 你现在写的每个函数，都是 Day40 之后 Function Calling 的零件。
