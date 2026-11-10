@@ -7,13 +7,18 @@
 - 每日投入：工作日 30~45 分钟（只做「必做」），周末 1~2 小时
 - 环境：Python 3.13.14 / Git 2.56.0 / VS Code
 
+## 知识总览（忘了就查这里）
+
+- **`notes/day01_05_overview.md`** —— Day1~Day5 全部知识点 + 每个点一个能跑的例子 + 10 题自测
+- **`python code/recap_day1_5.py`** —— 一条命令跑完全部例子，亲眼看输出
+
 ## 当前排期（2026-11-10 重排）
 
-真实进度：Day1~Day4 已完成并推送（`5d10079`）。Day5 起原来的日历排期已失效，按下面这张表走。
+真实进度：Day1~Day5 已完成并推送。Day6 起按下面这张表走。
 
 | 日期 | Day | 主题 | 必做（30~45 分钟） |
 |---|---|---|---|
-| 11-10 二 | Day5 | 函数与模块化 | 跑 `day05_functions.py` + `day05_verify.py`，回答两个问题 |
+| 11-10 二 | Day5 | 函数与模块化 | ✅ 已完成（`7105850`）|
 | 11-11 三 | Day6 | 文件 / JSON / 路径 | 跑 `day06_todo.py`，add→list→done 各一次，关终端再开确认数据还在 |
 | 11-12 四 | Day7 | 周复盘 | 填 `notes/Week01-review.md` 前四节 + 写 300 字周记 |
 | 11-13 五 | Day8 | 面向对象 | 用 dataclass 定义 `Message(role, content)` 和 `ToolCall(name, args)` |
