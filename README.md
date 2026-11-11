@@ -119,15 +119,17 @@ docs/      项目立项文档
 > 今天的验收线只有一条：**输入 10 和 3，重构版的输出必须和原来完全一样。**
 > 工具（tool）就是函数 —— 你现在写的每个函数，都是 Day40 之后 Function Calling 的零件。
 
-## Day6 · 文件、JSON、路径（2026-11-07，待补）
+## Day6 · 文件、JSON、路径（2026-11-11 完成）
 
-- [ ] 学：`open()` / `read_text` / `write_text`、`encoding="utf-8"` 为什么必须写
-- [ ] 学：`json.loads` / `json.dumps`、`ensure_ascii=False` 的作用
-- [ ] 学：`pathlib.Path`、`Path(__file__).parent` 为什么比相对路径可靠
-- [ ] 跑通：`code/day06_todo.py list`（空清单不报错）
-- [ ] 用一遍：`add` / `list` / `done` / `rm` 各一次，关掉终端再开，数据还在
-- [ ] 记：`notes/Day06.md`
-- [ ] 提交并推送
+- [x] 学：`open()` / `read_text` / `write_text`、`encoding="utf-8"` 为什么必须写
+- [x] 学：`json.loads` / `json.dumps`、`ensure_ascii=False` 的作用
+- [x] 学：`pathlib.Path`、`Path(__file__).parent` 为什么比相对路径可靠
+- [x] 跑通：`code/day06_todo.py list`（空清单不报错）
+- [x] 用一遍：`add` ×3 / `list` / `done 2`，关掉终端再开数据还在（`rm` 未用）
+- [x] 记：`notes/Day06.md`（含 GBK 编码坑与四种坏法对照表）
+- [x] 提交并推送（`edfc24a`）
+
+> 两题验收：UTF-8 不写会乱码 ✅ / `Path(__file__).parent` 让路径跟脚本走 ✅
 
 > 验收：**关掉 PowerShell 再打开，`list` 出来的条目还在。**
 > JSON 是你和大模型沟通的通用语言 —— 后面每一次工具调用、每一条对话历史，都是 JSON。
