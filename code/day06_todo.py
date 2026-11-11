@@ -25,11 +25,15 @@ DATA_FILE = Path(__file__).parent / "todo.json"
 # ---------- 存取 ----------
 
 def load_todos():
-    """读 todo.json，返回 list。文件不存在 / 内容坏了都不崩。"""
+    """读 todo.json，返回 list。文件不存在 / 内容坏了 / 编码不对，都不崩。"""
     if not DATA_FILE.exists():
         return []
     try:
         text = DATA_FILE.read_text(encoding="utf-8")
+    except UnicodeDecodeError:
+        # 文件存在，但里面不是 UTF-8 字节（多半被记事本 / 命令行按 GBK 写过）
+        print(f"[警告] {DATA_FILE.name} 不是 UTF-8 编码，本次按空清单处理")
+        return []
     except OSError as e:
         print(f"[警告] 读不了 {DATA_FILE.name}：{e}")
         return []

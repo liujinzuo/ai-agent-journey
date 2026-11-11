@@ -141,8 +141,25 @@ Path("todo.json").write_text(text, encoding="utf-8")
 
 ## 九、我踩的坑
 
-（自己填，写真实遇到的，一两行就够）
+（真实经历，2026-11-11）
+
+1. 用 `python -c "open('code/todo.json','w').write('{坏掉了')"` 造坏文件时，那个 `open` **没写 encoding**，
+   Windows 按 GBK 写入了字节 `7b bb b5 b5 f4 c1 cb`；脚本用 UTF-8 读 →
+   `UnicodeDecodeError: 'utf-8' codec can't decode byte 0xbb in position 1`
+2. 更关键的是 `load_todos` 当时只接了 `json.JSONDecodeError` 和 `OSError`，**没接 `UnicodeDecodeError`**
+   （它是 `ValueError` 的子类，不是 `OSError`），所以兜底漏了一类，整个程序崩在读取那一步
+3. 修法：单独 `except UnicodeDecodeError`，按空清单处理
+
+**教训：「内容坏了」不止一种坏法，兜底要分三类**
+
+| 坏法 | 异常类型 | 处理 |
+|---|---|---|
+| 文件不存在 | 先判 `exists()` | 返回空清单 |
+| 读不到（权限/占用） | `OSError` | 警告 + 空清单 |
+| 编码不对（GBK 写的） | `UnicodeDecodeError` | 警告 + 空清单 |
+| 语法不对（少引号） | `json.JSONDecodeError` | 警告 + 空清单 |
 
 ## 十、一句话总结
 
-（自己写，比如「程序的状态要落盘，落盘用 JSON，JSON 的两个函数是 loads 和 dumps」）
+- 程序的状态要落盘，落盘用 JSON，四个动作是 `read_text` → `loads` → `dumps` → `write_text`；
+  `encoding="utf-8"` 一次都不能省——省一次，就撞一次上面那个 `0xbb`。

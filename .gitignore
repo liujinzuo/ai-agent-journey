@@ -18,6 +18,10 @@ env/
 data/
 *.db
 *.sqlite3
+
+# 程序自己生成的运行时数据（不是源码，不该进仓库）
+code/todo.json
+code/todo.json.tmp
 chroma/
 *.faiss
 
