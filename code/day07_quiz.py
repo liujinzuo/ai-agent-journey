@@ -18,8 +18,7 @@ a = input("请输入一个数：")
 print(a + 3)
 """,
         "q": "运行后在提示处输入 10，会发生什么？",
-        "options": [B
-                
+        "options": [
             "A. 输出 13",
             "B. 报 TypeError",
             "C. 输出 103",
@@ -34,7 +33,7 @@ print(a + 3)
         "topic": "Day3 · 字典计数",
         "code": None,
         "q": "字典 counts 里现在还没有 \"agent\" 这个键。要把它记成出现 1 次，哪句是对的？",
-        "options": [B
+        "options": [
             'A. counts["agent"] = counts["agent"] + 1',
             'B. counts["agent"] = counts.get("agent", 0) + 1',
             'C. counts.append("agent")',
@@ -53,7 +52,7 @@ result = [n * 2 for n in nums if n > 2]
 print(result)
 """,
         "q": "输出是什么？",
-        "options": [b
+        "options": [
             "A. [2, 4, 6, 8]",
             "B. [6, 8]",
             "C. [3, 4]",
@@ -73,7 +72,7 @@ result = show("你好")
 print(f"返回值：{result}")
 """,
         "q": "输出是什么？",
-        "options": [C
+        "options": [
             "A. 打印：你好 / 返回值：打印：你好",
             "B. 打印：你好 / 返回值：你好",
             "C. 打印：你好 / 返回值：None",
@@ -88,7 +87,7 @@ print(f"返回值：{result}")
         "topic": "Day4 · break vs continue",
         "code": None,
         "q": "for 循环里 break 和 continue 的区别是什么？",
-        "options": [B
+        "options": [
             "A. break 跳出本次循环，continue 跳出整个循环",
             "B. break 结束整个循环，continue 跳过本次剩下的、直接进下一轮",
             "C. 两者完全一样，只是写法不同",
@@ -103,7 +102,7 @@ print(f"返回值：{result}")
         "topic": "Day4 · 为什么 Agent 要捕获异常",
         "code": None,
         "q": "为什么 Agent 调用工具时一定要 try/except？",
-        "options": [B
+        "options": [
             "A. 让代码运行得更快",
             "B. 工具失败时把错误变成字符串喂回模型，模型可以重试或换工具，而不是整个 Agent 崩掉",
             "C. 可以自动修复代码里的 bug",
@@ -118,7 +117,7 @@ print(f"返回值：{result}")
         "topic": "Day6 · json.dumps 参数",
         "code": None,
         "q": 'json.dumps(data, ensure_ascii=False) 里 ensure_ascii=False 的作用是什么？',
-        "options": [B
+        "options": [
             "A. 让文件体积更小",
             "B. 中文保持原样，不变成 \\u4f60\\u597d 这种转义",
             "C. 加快写入速度",
@@ -133,7 +132,7 @@ print(f"返回值：{result}")
         "topic": "Day6 · 路径为什么跟脚本走",
         "code": None,
         "q": 'DATA_FILE = Path(__file__).parent / "todo.json" 这样写解决了什么问题？',
-        "options": [A
+        "options": [
             "A. 让数据文件的路径跟着脚本走，不管你在哪个目录下敲命令",
             "B. 自动创建不存在的文件",
             "C. 让文件读取得更快",
@@ -148,7 +147,7 @@ print(f"返回值：{result}")
         "topic": "Day6 · 编码",
         "code": None,
         "q": '读写含中文的文件时，encoding="utf-8" 为什么必须写？',
-        "options": [B
+        "options": [
             "A. 不写会变慢",
             "B. Windows 中文系统默认按 GBK 打开，含中文会乱码或抛 UnicodeDecodeError",
             "C. 不写文件体积会变大",
@@ -164,7 +163,7 @@ print(f"返回值：{result}")
         "code": None,
         "q": "计算器拆成 read_number / calculate / print_results / main 后，"
              "想加一条 // 整除结果，只改哪个函数？",
-        "options": [B
+        "options": [
             "A. read_number",
             "B. calculate",
             "C. print_results",
@@ -187,7 +186,7 @@ print(add_item(nums, 4))
 print(nums)
 """,
         "q": "输出是什么？",
-        "options": [B
+        "options": [
             "A. 第一行 4，第二行 [1, 2, 3]",
             "B. 第一行 4，第二行 [1, 2, 3, 4]",
             "C. 第一行 3，第二行 [1, 2, 3, 4]",
@@ -203,7 +202,7 @@ print(nums)
         "topic": "Day3 · 集合与字典的区别",
         "code": None,
         "q": '写 {"agent", 5} 和 {"agent": 5} 有什么区别？',
-        "options": [B
+        "options": [
             "A. 完全一样，都是字典",
             "B. 前者是集合（无序、不重复），后者才是字典（键值对）",
             "C. 前者直接报错",
