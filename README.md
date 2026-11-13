@@ -145,6 +145,20 @@ docs/      项目立项文档
 
 > 周复盘的作用不是打卡，是**发现自己哪一天在假装学习**。写不出来，就是没学会。
 
+## Day8 · 面向对象与 dataclass（2026-11-13）
+
+- [ ] 学：class / `__init__` / `self` / 实例方法（只求看懂最小骨架）
+- [ ] 学：`@dataclass` 自动生成的 `__init__` / `__repr__` / `__eq__` 各解决什么问题
+- [ ] 跑通：`code/day08_dataclass.py`（六节演示，含三个真实报错）
+- [ ] 交付：`Message(role, content)` 与 `ToolCall(name, arguments)` 两个数据类
+- [ ] 看懂：对象 ↔ JSON 双向转换（`asdict` + `json.dumps` / `json.loads` + `**`）
+- [ ] 记：`notes/Day08.md`
+- [ ] 提交并推送
+
+> 验收：能说出「为什么 `ToolCall` 不能塞进 `Message` 里加个字段了事」。
+> 今天只求记住：**dataclass 让数据有名字、有类型、打错字立刻报错。**
+> Agent 里的 `Message` / `ToolCall` / `Tool` / `AgentState`，全是这么定义的。
+
 ## 今日复盘（Day1）
 
 - 环境：Python 3.13.14、Git 2.56.0 装好，VS Code 待装。
