@@ -9,7 +9,7 @@
 
 | 项目 | 值 |
 |---|---|
-| 已完成 | Day1 ~ Day17 |
+| 已完成 | Day1 ~ Day18 |
 | 当前周次 | 第 2 周尚未走完（原计划第 2 周为 Day8~Day14） |
 | 学习方式 | 每天：跑一段代码 → 答一道题 → 笔记进仓库 |
 | 代码仓库 | `C:\Users\22155\ai-agent-journey`（GitHub: liujinzuo/ai-agent-journey） |
@@ -18,7 +18,7 @@
 
 ---
 
-## 二、已完成的 17 天
+## 二、已完成的 18 天
 
 | Day | 完成日期 | 小标题 | 实际学到的 |
 |---|---|---|---|
@@ -60,6 +60,7 @@
 | 15 | LLM 到底是什么：建立直觉 | token 与分词、上下文窗口、temperature / top_p、为什么会有幻觉、预训练和推理的区别。先看视频建立直觉，别急着看公式 |
 | 16 | Transformer 与注意力：原理速览 | 只要理解三件事：注意力是在算相关性、位置编码提供顺序、自回归是一个字一个字往外蹦。不用推导矩阵 |
 | 17 | 第一个 API Key 与真实调用 | ✅ 11-24 完成（`day17_first_call.py`）：钥匙只放 `.env`、回执三字段（content / finish_reason / usage）、先看 finish_reason 再解析、温度 0 两次结果一致 |
+| 18 | Prompt 工程（上）：把话说清楚 | ✅ 11-25 完成（`day18_prompt_ab.py`）：四件套（角色/任务/约束/格式）四版对照，格式最硬、角色最弱；约束写太死会漏抽（「去投诉」判 null vs「要退钱」判 true） |
 | 18 | Prompt 工程（上）：把话说清楚 | 角色设定、明确指令、分隔符、少样本示例（few-shot）、指定输出格式；做对照实验而不是凭感觉 |
 | 19 | Prompt 工程（下）：思维链与系统提示 | Chain-of-Thought、零样本 CoT 触发句、自我批判、让模型先列标准再打分；系统提示词（system prompt）的写法与常见结构 |
 
@@ -97,7 +98,7 @@
 - [x] **Day15** LLM 到底是什么：建立直觉　← ✅ 2026-11-21 完成（`day15_sampling.py`）：实际讲的是原 Day15 里剩下的两块「temperature / top_p」与「预训练 vs 推理」；token 与上下文窗口已在 Day14 讲完
 - [x] **Day16** Transformer 与注意力：原理速览　← ✅ 2026-11-22 完成（`day16_attention.py`）：词袋丢顺序 / 注意力权重 / 位置编码三件事，未碰 Q/K/V 与矩阵推导
 - [x] **Day17** 拿到你的第一个 API Key 并跑通调用　← ✅ 2026-11-24 完成（`day17_first_call.py`）：钥匙只放 `.env`，回执只看 content / finish_reason / usage，温度 0 连打两次一致
-- [ ] **Day18** Prompt 工程（上）：把话说清楚
+- [x] **Day18** Prompt 工程（上）：把话说清楚　← ✅ 2026-11-25 完成（`day18_prompt_ab.py`）：同消息四版对照，V1/V2 解析失败、V3 可解析、V4 约束导致漏抽
 - [ ] **Day19** Prompt 工程（下）：思维链与系统提示
 - [ ] **Day20** 结构化输出：让模型吐出能用的 JSON
 - [ ] **Day21** 周复盘：命令行 ChatGPT
