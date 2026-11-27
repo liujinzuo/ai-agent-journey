@@ -340,3 +340,23 @@ system = (
 ```
 
 > 记忆锚：**示例不改规则，只放大规则。**
+
+---
+
+## Day20 · 印表格（2026-11-27）
+
+1. `json_object` 只保证「是合法 JSON」，不保证「是你要的字段」——实测 DeepSeek 会自己起中文名（订单号 / 问题类型 / 紧急程度），`data["order_id"]` 当场 KeyError。`json_schema` 严格模式 DeepSeek 还没有（HTTP 400），所以「prompt 规定字段名 + 本地校验」两件缺一不可。
+2. 形状用 Pydantic 写成类：字段名、类型、枚举（Literal）、范围（Field ge/le）一次定死，校验不过抛 ValidationError，报错直接指到哪个字段错在哪。
+3. 形状对 ≠ 内容对：schema 管不了「这句话原文里有没有」，业务核对得自己写——Day18 那个编造单号的问题，解药是代码里查一次，不是 prompt 写得更狠。
+4. 校验不过把报错原文喂回去重试（修复循环），实测第 2 次就通过；但上限 3 次，三次不过是 prompt 的问题，重试要计 token 成本。
+
+```python
+class Ticket(BaseModel):
+    order_id: str | None
+    issue_type: Literal["物流", "质量", "退款", "其他"]
+    refund_requested: bool
+    urgency: int = Field(ge=1, le=5)
+    key_phrases: list[str] = Field(min_length=1, max_length=3)
+```
+
+> 记忆锚：**能解析不等于能用，能用不等于对——形状交给 schema，真假交给代码。**
